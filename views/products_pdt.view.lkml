@@ -4,7 +4,6 @@ view: products_pdt {
         column: id {field:products.id}
         column: brand {field:products.brand}
       }
-
       datagroup_trigger: products_dg
     }
   }
