@@ -28,6 +28,10 @@ datagroup: products_dg {
 }
 
 explore: products {
+  conditionally_filter: {
+    filters: [id: "123"]
+    unless: [brand]
+  }
   persist_with: products_dg
 }
 
