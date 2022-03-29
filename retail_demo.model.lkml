@@ -27,7 +27,9 @@ datagroup: products_dg {
   description: "products datagroup description"
 }
 
-explore: products {}
+explore: products {
+  persist_with: products_dg
+}
 
 explore: products_pdt {
   persist_with: products_dg
