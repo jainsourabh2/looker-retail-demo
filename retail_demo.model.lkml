@@ -44,3 +44,16 @@ explore: customers {}
 explore: customers_derived_native {}
 
 explore: customers_derived_sql {}
+
+explore: channels {}
+
+# Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
+explore: transaction_detail {
+  hidden: yes
+
+  join: transaction_detail__line_items {
+    view_label: "Transaction Detail: Line Items"
+    sql: LEFT JOIN UNNEST(${transaction_detail.line_items}) as transaction_detail__line_items ;;
+    relationship: one_to_many
+  }
+}

@@ -1,14 +1,3 @@
-# Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
-explore: transaction_detail {
-  hidden: yes
-
-  join: transaction_detail__line_items {
-    view_label: "Transaction Detail: Line Items"
-    sql: LEFT JOIN UNNEST(${transaction_detail.line_items}) as transaction_detail__line_items ;;
-    relationship: one_to_many
-  }
-}
-
 view: transaction_detail {
   sql_table_name: `sourabhjainceanalytics.retail_demo.transaction_detail`
     ;;
