@@ -17,7 +17,7 @@ view: customers_derived_native {
     sql: ${TABLE}.customer_id ;;
   }
 
-  dimension: address_cust1 {
+  dimension: address {
     type: string
     sql: ${TABLE}.address ;;
   }
