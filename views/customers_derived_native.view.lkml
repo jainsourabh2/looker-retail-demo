@@ -21,4 +21,5 @@ view: customers_derived_native {
     type: string
     sql: ${TABLE}.address ;;
   }
+
 }
