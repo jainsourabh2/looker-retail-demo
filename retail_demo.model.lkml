@@ -39,8 +39,7 @@ explore: products_pdt {
   persist_with: products_dg
 }
 
-explore: customers {
-}
+explore: customers {}
 
 explore: customers_derived_native {}
 
